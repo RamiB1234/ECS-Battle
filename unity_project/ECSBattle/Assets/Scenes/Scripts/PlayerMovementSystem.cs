@@ -8,7 +8,7 @@ public partial class PlayerMovementSystem : SystemBase
         float delta = Time.DeltaTime;
         Entities.ForEach((ref Translation translation, in UnitComponentData unitComponent) =>
         {
-            translation.Value.x += unitComponent.value * delta;
+            translation.Value.x += unitComponent.movementSpeed * delta;
         }).ScheduleParallel();
 
     }

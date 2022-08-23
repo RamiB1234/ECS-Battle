@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1728
     height: 1051
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Console
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 92
+  controlID: 50
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,8 +123,8 @@ MonoBehaviour:
     y: 0
     width: 408.5
     height: 1001
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -494,14 +494,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/ramibukhari/Desktop/Dev Tools/Repos/ECSBattle
+  m_LastProjectPath: /Users/ramibukhari/Desktop/Dev Tools/Repos/ECS Battle/unity_project/ECSBattle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e2620000
     m_LastClickedID: 25314
-    m_ExpandedIDs: 0000000096790000987900009a7900009c790000
+    m_ExpandedIDs: 000000009e7b0000a07b0000a27b0000a47b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -529,21 +529,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000096790000987900009a7900009c790000
+    m_ExpandedIDs: ffffffff000000009e7b0000a07b0000a47b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Testing
+      m_OriginalName: Testing
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 8788
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
@@ -659,9 +659,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 02f8ffff
-      m_LastClickedID: -2046
-      m_ExpandedIDs: 30fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -911,9 +911,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.1033425, y: 1.3091048, z: 0.08942149}
+    m_Target: {x: 3.0474036, y: 0.5004738, z: 0.1391005}
     speed: 2
-    m_Value: {x: -3.1033425, y: 1.3091048, z: 0.08942149}
+    m_Value: {x: 3.05631, y: 0.49102858, z: 0.13892744}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -964,9 +964,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.2791376
+    m_Target: 5.7513337
     speed: 2
-    m_Value: 7.2791376
+    m_Value: 5.7686396
   m_Ortho:
     m_Target: 1
     speed: 2

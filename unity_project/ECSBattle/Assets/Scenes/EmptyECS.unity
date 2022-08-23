@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 2013832388}
   - component: {fileID: 2013832383}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,4 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb2c449e7ae8546d08de8185637371e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 2
+  healthPoints: 0
+  attack: 0
+  attackSpeed: 0
+  attackRange: 0
+  movementSpeed: 0
