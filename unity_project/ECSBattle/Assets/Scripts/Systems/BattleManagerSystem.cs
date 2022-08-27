@@ -9,9 +9,22 @@ public partial class BattleManagerSystem : SystemBase
     }
     protected override void OnUpdate()
     {
-        Entities.ForEach((BattleManagerManagedComponent battle) =>
+        Entities.ForEach((BattleManagerManagedComponent battleMgr) =>
         {
-            battle.battleStarted = battle.startButton.GetComponent<StartButton>().battleStarted;
+            // Start game if clicked:
+            battleMgr.battleStarted = battleMgr.startButton.GetComponent<StartButton>().battleStarted;
+
+            // Show winner text:
+            if(battleMgr.blueTeamWins)
+            {
+                battleMgr.blueTeamWinsText.GetComponent<CanvasGroup>().alpha = 1;
+                battleMgr.battleStarted = false;
+            }
+            if (battleMgr.redTeamWins)
+            {
+                battleMgr.redTeamWinsText.GetComponent<CanvasGroup>().alpha = 1;
+                battleMgr.battleStarted = false;
+            }
         }).WithoutBurst().Run();
     }
 }

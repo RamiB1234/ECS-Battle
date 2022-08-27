@@ -4,35 +4,48 @@ using Unity.Transforms;
 
 public partial class UnitAttackSystem : SystemBase
 {
+    private BattleManagerManagedComponent battleMgr;
+
+    protected override void OnStartRunning()
+    {
+        Entities.ForEach((in BattleManagerManagedComponent battleManagerManagedComponent) =>
+        {
+            battleMgr = battleManagerManagedComponent;
+        }).WithoutBurst().Run();
+    }
+
     protected override void OnUpdate()
     {
         Entities.ForEach((ref Entity entity, ref UnitComponentData unitComponent) =>
         {
-            var targetFinder = GetComponent<UnitFinderComponentData>(entity);
-            if (targetFinder.target != Entity.Null)
+            if(battleMgr.battleStarted)
             {
-
-                // Get the translation components:
-                var target = targetFinder.target;
-                var targetTranslation = GetComponent<Translation>(target);
-                var translation = GetComponent<Translation>(entity);
-                var dist = math.distance(targetTranslation.Value, translation.Value);
-
-                // Attack if target is in range and cooldown timer is finished:
-                if (dist < unitComponent.attackRange)
+                var targetFinder = GetComponent<UnitFinderComponentData>(entity);
+                if (targetFinder.target != Entity.Null)
                 {
-                    if (unitComponent.attackCoolDownTimer > 0)
-                    {
-                        unitComponent.attackCoolDownTimer -= 0.01f* unitComponent.attackSpeed;
-                    }
-                    else
-                    {
-                        var targetData = GetComponent<UnitComponentData>(target);
-                        targetData.healthPoints -= unitComponent.attack;
 
-                        // Reset cool down timer:
-                        unitComponent.attackCoolDownTimer = 1;
-                        SetComponent(target, targetData);
+                    // Get the translation components:
+                    var target = targetFinder.target;
+                    var targetTranslation = GetComponent<Translation>(target);
+                    var translation = GetComponent<Translation>(entity);
+                    var dist = math.distance(targetTranslation.Value, translation.Value);
+
+                    // Attack if target is in range and cooldown timer is finished:
+                    if (dist < unitComponent.attackRange)
+                    {
+                        if (unitComponent.attackCoolDownTimer > 0)
+                        {
+                            unitComponent.attackCoolDownTimer -= 0.01f * unitComponent.attackSpeed;
+                        }
+                        else
+                        {
+                            var targetData = GetComponent<UnitComponentData>(target);
+                            targetData.healthPoints -= unitComponent.attack;
+
+                            // Reset cool down timer:
+                            unitComponent.attackCoolDownTimer = 1;
+                            SetComponent(target, targetData);
+                        }
                     }
                 }
             }

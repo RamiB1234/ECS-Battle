@@ -6,6 +6,7 @@ public partial class TargetFinderSystem : SystemBase
 {
     private List<Entity> teamAUnits;
     private List<Entity> teamBUnits;
+    private BattleManagerManagedComponent battleMgr;
 
     protected override void OnStartRunning()
     {
@@ -24,10 +25,17 @@ public partial class TargetFinderSystem : SystemBase
                 teamBUnits.Add(unit);
             }
         }).WithoutBurst().Run();
+
+        Entities.ForEach((in BattleManagerManagedComponent battleManagerManagedComponent) =>
+        {
+            battleMgr = battleManagerManagedComponent;
+        }).WithoutBurst().Run();
     }
 
     protected override void OnUpdate()
     {
+        var allTeamADies = true;
+        var allTeamBDies = true;
 
         Entities.ForEach((Entity unit, ref UnitFinderComponentData unitFinder) =>
         {
@@ -42,6 +50,16 @@ public partial class TargetFinderSystem : SystemBase
             }
 
             var unitComponent = GetComponent<UnitComponentData>(unit);
+
+            // Check winners:
+            if(unitComponent.healthPoints>0 && unitComponent.isTeamA)
+            {
+                allTeamADies = false;
+            }
+            else if (unitComponent.healthPoints > 0 && unitComponent.isTeamA==false)
+            {
+                allTeamBDies = false;
+            }
             // Find a random target from the opposite team:
             if (unitFinder.target == Entity.Null)
             {
@@ -66,5 +84,15 @@ public partial class TargetFinderSystem : SystemBase
             }
 
         }).WithoutBurst().Run();
+
+        if(allTeamADies)
+        {
+            battleMgr.redTeamWins = true;
+        }
+
+        if (allTeamBDies)
+        {
+            battleMgr.blueTeamWins = true;
+        }
     }
 }
