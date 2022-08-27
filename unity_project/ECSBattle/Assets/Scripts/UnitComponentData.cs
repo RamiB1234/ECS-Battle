@@ -8,4 +8,6 @@ public struct UnitComponentData : IComponentData
     public int attackSpeed;
     public int attackRange;
     public int movementSpeed;
+    public bool isTeamA;
+    public Entity targetUnit;
 }

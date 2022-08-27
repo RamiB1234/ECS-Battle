@@ -12,7 +12,14 @@ public partial class SpawnUnitSystem : SystemBase
         {
             var prefab = spawnPointData.prefab;
             var unitEntity = EntityManager.Instantiate(prefab);
+
+            // Set translation:
             SetComponent(unitEntity, spawnPointData.translation);
+
+            // Set isTeamA:
+            var componentData = GetComponent<UnitComponentData>(unitEntity);
+            componentData.isTeamA = spawnPointData.isTeamA;
+            SetComponent(unitEntity, componentData);
 
         }).WithStructuralChanges().Run();
 

@@ -254,6 +254,7 @@ MonoBehaviour:
       y: 0
       z: -0.3199997
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 0
 --- !u!1 &158257657
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +386,7 @@ MonoBehaviour:
       y: 0
       z: -0.3199997
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 1
 --- !u!1 &213979632
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +518,7 @@ MonoBehaviour:
       y: 0
       z: 4.82
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 1
 --- !u!1 &299065629
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +650,7 @@ MonoBehaviour:
       y: 0
       z: -0.3199997
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 0
 --- !u!1 &469320738
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +900,7 @@ MonoBehaviour:
       y: 0
       z: 4.82
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 1
 --- !u!1 &597060100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1032,7 @@ MonoBehaviour:
       y: 0
       z: -0.3199997
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 0
 --- !u!1 &980553996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1279,7 @@ MonoBehaviour:
       y: 0
       z: 4.82
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 0
 --- !u!1 &1296553474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1411,7 @@ MonoBehaviour:
       y: 0
       z: 4.82
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 0
 --- !u!1 &1335068684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1644,7 @@ MonoBehaviour:
       y: 0
       z: 4.82
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 1
 --- !u!1 &1627250054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,6 +1776,7 @@ MonoBehaviour:
       y: 0
       z: -0.3199997
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 1
 --- !u!1 &1659476637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,6 +2043,7 @@ MonoBehaviour:
       y: 0
       z: 4.82
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 0
 --- !u!1 &2011025828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,3 +2243,4 @@ MonoBehaviour:
       y: 0
       z: -0.3199997
   prefab: {fileID: 1586092402586622969, guid: 06f706bd098b04037a94c2547062f253, type: 3}
+  isTeamA: 1
