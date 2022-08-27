@@ -13,7 +13,7 @@ public partial class TargetFinderSystem : SystemBase
         teamAUnits = new List<Entity>();
         teamBUnits = new List<Entity>();
 
-        Entities.ForEach((in UnitComponentData unitComponent, in Entity unit) =>
+        Entities.ForEach((in Entity unit,in UnitComponentData unitComponent) =>
         {
             if (unitComponent.isTeamA == true)
             {
@@ -28,18 +28,40 @@ public partial class TargetFinderSystem : SystemBase
 
     protected override void OnUpdate()
     {
-        // Find a random target from the opposite team:
-        Entities.ForEach((ref UnitComponentData unitComponent, in Entity unit) =>
+
+        Entities.ForEach((Entity unit, ref UnitFinderComponentData unitFinder) =>
         {
-            if(unitComponent.targetUnit == Entity.Null)
+            var target = unitFinder.target;
+            if (target!= Entity.Null)
+            {
+                var targetData = GetComponent<UnitComponentData>(target);
+                if (targetData.healthPoints <= 0)
+                {
+                    unitFinder.target = Entity.Null;
+                }
+            }
+
+            var unitComponent = GetComponent<UnitComponentData>(unit);
+            // Find a random target from the opposite team:
+            if (unitFinder.target == Entity.Null)
             {
                 if(unitComponent.isTeamA)
                 {
-                    unitComponent.targetUnit = teamBUnits[Random.Range(0, teamBUnits.Count)];
+                    var newTarget = teamBUnits[Random.Range(0, teamBUnits.Count)];
+                    var newTargettData = GetComponent<UnitComponentData>(newTarget);
+                    if(newTargettData.healthPoints>0)
+                    {
+                        unitFinder.target = newTarget;
+                    }
                 }
-                else
+                else if (unitComponent.isTeamA==false)
                 {
-                    unitComponent.targetUnit = teamAUnits[Random.Range(0, teamAUnits.Count)];
+                    var newTarget = teamAUnits[Random.Range(0, teamAUnits.Count)];
+                    var newTargettData = GetComponent<UnitComponentData>(newTarget);
+                    if (newTargettData.healthPoints > 0)
+                    {
+                        unitFinder.target = newTarget;
+                    }
                 }
             }
 

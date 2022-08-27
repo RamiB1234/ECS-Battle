@@ -1,12 +1,9 @@
 using Unity.Entities;
-using UnityEngine;
 
 public partial class SpawnUnitSystem : SystemBase
 {
     protected override void OnStartRunning()
     {
-        Application.targetFrameRate = 60;
-
         // Instantiate all units:
         Entities.ForEach((in SpawnPointData spawnPointData) =>
         {
@@ -20,6 +17,7 @@ public partial class SpawnUnitSystem : SystemBase
             var componentData = GetComponent<UnitComponentData>(unitEntity);
             componentData.isTeamA = spawnPointData.isTeamA;
             componentData.unitNo = spawnPointData.unitNo;
+            componentData.attackCoolDownTimer = 1;
             SetComponent(unitEntity, componentData);
 
         }).WithStructuralChanges().Run();
