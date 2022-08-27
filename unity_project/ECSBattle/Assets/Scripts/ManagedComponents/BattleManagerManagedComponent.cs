@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BattleManagerManagedComponent : IComponentData
 {
     public Button startButton;
+    public Button restartButton;
     public GameObject blueTeamWinsText;
     public bool blueTeamWins = false;
     public GameObject redTeamWinsText;
