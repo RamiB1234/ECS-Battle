@@ -116,7 +116,9 @@ MonoBehaviour:
   attack: 0
   attackSpeed: 0
   attackRange: 0
-  movementSpeed: 0
+  movementSpeed: 1
+  isTeamA: 0
+  targetUnit: {fileID: 0}
 --- !u!114 &1586092402586622849
 MonoBehaviour:
   m_ObjectHideFlags: 0
