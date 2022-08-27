@@ -115,9 +115,10 @@ MonoBehaviour:
   healthPoints: 100
   attack: 0
   attackSpeed: 0
-  attackRange: 0
-  movementSpeed: 1
+  attackRange: 1.5
+  movementSpeed: 1.5
   isTeamA: 0
+  unitNo: 0
   targetUnit: {fileID: 0}
 --- !u!114 &1586092402586622849
 MonoBehaviour:

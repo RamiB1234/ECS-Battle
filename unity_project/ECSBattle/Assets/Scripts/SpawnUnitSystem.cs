@@ -19,6 +19,7 @@ public partial class SpawnUnitSystem : SystemBase
             // Set isTeamA:
             var componentData = GetComponent<UnitComponentData>(unitEntity);
             componentData.isTeamA = spawnPointData.isTeamA;
+            componentData.unitNo = spawnPointData.unitNo;
             SetComponent(unitEntity, componentData);
 
         }).WithStructuralChanges().Run();

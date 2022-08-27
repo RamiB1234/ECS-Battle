@@ -4,10 +4,11 @@ using Unity.Entities;
 public struct UnitComponentData : IComponentData
 {
     public int healthPoints;
-    public int attack;
-    public int attackSpeed;
-    public int attackRange;
-    public int movementSpeed;
+    public float attack;
+    public float attackSpeed;
+    public float attackRange;
+    public float movementSpeed;
     public bool isTeamA;
+    public int unitNo;
     public Entity targetUnit;
 }

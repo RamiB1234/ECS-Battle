@@ -4,7 +4,6 @@ using Unity.Transforms;
 
 public partial class PlayerMovementSystem : SystemBase
 {
-    private float distanceBuffer = 1.5f;
     protected override void OnUpdate()
     {
         float delta = Time.DeltaTime;
@@ -17,7 +16,7 @@ public partial class PlayerMovementSystem : SystemBase
                 var targetTranslation = GetComponent<Translation>(unitComponent.targetUnit);
                 var translation = GetComponent<Translation>(entity);
 
-                if (CalculateDistance(targetTranslation, translation) > distanceBuffer)
+                if (CalculateDistance(targetTranslation, translation) > unitComponent.attackRange)
                 {
                     // Move towards the target in XZ-plane:
                     if (targetTranslation.Value.x > translation.Value.x)
