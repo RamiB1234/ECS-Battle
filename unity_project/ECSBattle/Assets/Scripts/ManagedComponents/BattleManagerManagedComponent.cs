@@ -12,4 +12,7 @@ public class BattleManagerManagedComponent : IComponentData
     public GameObject redTeamWinsText;
     public bool redTeamWins = false;
     public bool battleStarted;
+    public TextAsset configFile;
+    public ConfigsModel configsModel;
+    public int selectedConfigIndex = 0;
 }

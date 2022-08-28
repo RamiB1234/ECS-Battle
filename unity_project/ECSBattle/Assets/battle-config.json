@@ -1,0 +1,55 @@
+{
+	"Configs": [
+		{
+			"TeamAProperties":{
+				"HP": 100,
+				"Attack": 10,
+				"AttackSpeed": 2,
+				"AttackRange": 1.5,
+				"MovementSpeed": 3
+			},
+			"TeamBProperties":{
+				"HP": 150,
+				"Attack": 20,
+				"AttackSpeed": 1,
+				"AttackRange": 4,
+				"MovementSpeed": 1
+			},
+			"Units":[1,2,3,10,14,16]
+		},
+		{
+			"TeamAProperties":{
+				"HP": 200,
+				"Attack": 20,
+				"AttackSpeed": 2.2,
+				"AttackRange": 1.5,
+				"MovementSpeed": 5
+			},
+			"TeamBProperties":{
+				"HP": 300,
+				"Attack": 40,
+				"AttackSpeed": 2,
+				"AttackRange": 1,
+				"MovementSpeed": 4
+			},
+			"Units":[4,5,6,12,15,18]
+		},
+		{
+			"TeamAProperties":{
+				"HP": 20,
+				"Attack": 30,
+				"AttackSpeed": 2,
+				"AttackRange": 1.5,
+				"MovementSpeed": 3
+			},
+			"TeamBProperties":{
+				"HP": 35,
+				"Attack": 12,
+				"AttackSpeed": 7,
+				"AttackRange": 4,
+				"MovementSpeed": 1
+			},
+			"Units":[1,2,3,6,7,8,9,10,11,12,13,16,17,18]
+		}
+	]
+}
