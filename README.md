@@ -1,5 +1,5 @@
 # ECS-Battle
-
+![ecs-battle](https://raw.githubusercontent.com/RamiB1234/ECS-Battle/master/ecs.gif "ecs-battle")
 ## Introduction
 
 This is a small Unity demo that demonstrates working with Unity DOTS and ECS. It is a battle simulator where two teams battle. Unit attributes and properties are configured in a JSON configuration file.
