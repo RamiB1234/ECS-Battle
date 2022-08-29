@@ -6,7 +6,7 @@ This is a small Unity demo that demonstrates working with Unity DOTS and ECS. It
 
 ## Documentation
 
-Please refer to the [Technical Documentatuin & Installation Guide](https://raw.githubusercontent.com/RamiB1234/ECS-Battle/master/documentation/GDD.pdf) for details on how to install the game and to know more about the technical details
+Please refer to the [Technical Documentatuin & Installation Guide](https://raw.githubusercontent.com/RamiB1234/ECS-Battle/master/documentation/ECS%20Battle%20-%20Documentation%20%26%20Installation%20Guide.pdf) for details on how to install the game and to know more about the technical details
 
 ## Installation
 
